@@ -1,0 +1,1 @@
+C:\Users\koenigs\Documents\Visual Studio 2012\Projects\SynchronicWorld\SynchronicWorld.Host.ConsoleApplication\bin\Debug\SynchronicWorld.Host.ConsoleApplication.exe.config

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SynchronicWorldService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54322/SynchronicWorldService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54322/SynchronicWorldService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54322/SynchronicWorldService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SynchronicWorld.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISynchronicWorldService_GetAllPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersons" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_CreatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePerson" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_CreatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetPersonByNickname_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByNickname" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetPersonByNickname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByNicknameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_UpdatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePerson" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_UpdatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeletePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePerson" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeletePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvents" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_CreateEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_CreateEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByName" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_UpdateEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_UpdateEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeleteEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeleteEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllContributions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributions" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllContributions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_CreateContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContribution" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_CreateContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetContributionByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributionByName" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetContributionByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContributionByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_AddContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContribution" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_AddContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByDate" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsBetweenTwoDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsBetweenTwoDates" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsBetweenTwoDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsBetweenTwoDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsByStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByStatus" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsByStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByType" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetEventsByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeleteClosedEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClosedEvents" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeleteClosedEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClosedEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_UpdatePendingEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePendingEvents" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_UpdatePendingEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePendingEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_AddPersonToOpenEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonToOpenEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_AddPersonToOpenEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonToOpenEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllPersonsFromOpenEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersonsFromOpenEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllPersonsFromOpenEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersonsFromOpenEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllContributionsFromEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionsFromEvent" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllContributionsFromEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionsFromEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllContributionsFromPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionsFromPerson" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_GetAllContributionsFromPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionsFromPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeleteAllContributionsForAllOpenEventsFromPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllContributionsForAllOpenEventsFromPerson" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronicWorldService_DeleteAllContributionsForAllOpenEventsFromPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllContributionsForAllOpenEventsFromPersonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISynchronicWorldService">
+    <wsdl:operation name="GetAllPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllPersons" message="tns:ISynchronicWorldService_GetAllPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllPersonsResponse" message="tns:ISynchronicWorldService_GetAllPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/CreatePerson" message="tns:ISynchronicWorldService_CreatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/CreatePersonResponse" message="tns:ISynchronicWorldService_CreatePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByNickname">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetPersonByNickname" message="tns:ISynchronicWorldService_GetPersonByNickname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetPersonByNicknameResponse" message="tns:ISynchronicWorldService_GetPersonByNickname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/UpdatePerson" message="tns:ISynchronicWorldService_UpdatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/UpdatePersonResponse" message="tns:ISynchronicWorldService_UpdatePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeletePerson" message="tns:ISynchronicWorldService_DeletePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeletePersonResponse" message="tns:ISynchronicWorldService_DeletePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllEvents" message="tns:ISynchronicWorldService_GetAllEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllEventsResponse" message="tns:ISynchronicWorldService_GetAllEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/CreateEvent" message="tns:ISynchronicWorldService_CreateEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/CreateEventResponse" message="tns:ISynchronicWorldService_CreateEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventByName" message="tns:ISynchronicWorldService_GetEventByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventByNameResponse" message="tns:ISynchronicWorldService_GetEventByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/UpdateEvent" message="tns:ISynchronicWorldService_UpdateEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/UpdateEventResponse" message="tns:ISynchronicWorldService_UpdateEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeleteEvent" message="tns:ISynchronicWorldService_DeleteEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeleteEventResponse" message="tns:ISynchronicWorldService_DeleteEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllContributions" message="tns:ISynchronicWorldService_GetAllContributions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllContributionsResponse" message="tns:ISynchronicWorldService_GetAllContributions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/CreateContribution" message="tns:ISynchronicWorldService_CreateContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/CreateContributionResponse" message="tns:ISynchronicWorldService_CreateContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContributionByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetContributionByName" message="tns:ISynchronicWorldService_GetContributionByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetContributionByNameResponse" message="tns:ISynchronicWorldService_GetContributionByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/AddContribution" message="tns:ISynchronicWorldService_AddContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/AddContributionResponse" message="tns:ISynchronicWorldService_AddContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsByDate" message="tns:ISynchronicWorldService_GetEventsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsByDateResponse" message="tns:ISynchronicWorldService_GetEventsByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsBetweenTwoDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsBetweenTwoDates" message="tns:ISynchronicWorldService_GetEventsBetweenTwoDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsBetweenTwoDatesResponse" message="tns:ISynchronicWorldService_GetEventsBetweenTwoDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsByStatus" message="tns:ISynchronicWorldService_GetEventsByStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsByStatusResponse" message="tns:ISynchronicWorldService_GetEventsByStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsByType" message="tns:ISynchronicWorldService_GetEventsByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetEventsByTypeResponse" message="tns:ISynchronicWorldService_GetEventsByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClosedEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeleteClosedEvents" message="tns:ISynchronicWorldService_DeleteClosedEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeleteClosedEventsResponse" message="tns:ISynchronicWorldService_DeleteClosedEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePendingEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/UpdatePendingEvents" message="tns:ISynchronicWorldService_UpdatePendingEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/UpdatePendingEventsResponse" message="tns:ISynchronicWorldService_UpdatePendingEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonToOpenEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/AddPersonToOpenEvent" message="tns:ISynchronicWorldService_AddPersonToOpenEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/AddPersonToOpenEventResponse" message="tns:ISynchronicWorldService_AddPersonToOpenEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPersonsFromOpenEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllPersonsFromOpenEvent" message="tns:ISynchronicWorldService_GetAllPersonsFromOpenEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllPersonsFromOpenEventResponse" message="tns:ISynchronicWorldService_GetAllPersonsFromOpenEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributionsFromEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllContributionsFromEvent" message="tns:ISynchronicWorldService_GetAllContributionsFromEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllContributionsFromEventResponse" message="tns:ISynchronicWorldService_GetAllContributionsFromEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributionsFromPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllContributionsFromPerson" message="tns:ISynchronicWorldService_GetAllContributionsFromPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/GetAllContributionsFromPersonResponse" message="tns:ISynchronicWorldService_GetAllContributionsFromPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllContributionsForAllOpenEventsFromPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeleteAllContributionsForAllOpenEventsFromPerson" message="tns:ISynchronicWorldService_DeleteAllContributionsForAllOpenEventsFromPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronicWorldService/DeleteAllContributionsForAllOpenEventsFromPersonResponse" message="tns:ISynchronicWorldService_DeleteAllContributionsForAllOpenEventsFromPerson_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISynchronicWorldService" type="tns:ISynchronicWorldService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllPersons">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetAllPersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePerson">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/CreatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByNickname">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetPersonByNickname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/UpdatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePerson">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/DeletePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvents">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetAllEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEvent">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/CreateEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventByName">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetEventByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEvent">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/UpdateEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvent">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/DeleteEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributions">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetAllContributions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateContribution">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/CreateContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContributionByName">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetContributionByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContribution">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/AddContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByDate">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetEventsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsBetweenTwoDates">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetEventsBetweenTwoDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByStatus">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetEventsByStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByType">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetEventsByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClosedEvents">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/DeleteClosedEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePendingEvents">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/UpdatePendingEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPersonToOpenEvent">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/AddPersonToOpenEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPersonsFromOpenEvent">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetAllPersonsFromOpenEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributionsFromEvent">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetAllContributionsFromEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributionsFromPerson">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/GetAllContributionsFromPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllContributionsForAllOpenEventsFromPerson">
+      <soap:operation soapAction="http://tempuri.org/ISynchronicWorldService/DeleteAllContributionsForAllOpenEventsFromPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SynchronicWorldService">
+    <wsdl:port name="BasicHttpBinding_ISynchronicWorldService" binding="tns:BasicHttpBinding_ISynchronicWorldService">
+      <soap:address location="http://localhost:54322/SynchronicWorldService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

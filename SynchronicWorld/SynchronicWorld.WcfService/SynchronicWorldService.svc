@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SynchronicWorld.WcfService.SynchronicWorldService" CodeBehind="SynchronicWorldService.svc.cs" %>
